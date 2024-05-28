@@ -28,6 +28,7 @@ export class AuthService {
         return userAccount;
       }
     } catch (error) {
+      console.log("Error in Appwrite Service :: createAccount ", error);
       throw error;
     }
   }
@@ -44,6 +45,7 @@ export class AuthService {
     try {
       return await this.account.get();
     } catch (error) {
+      console.log("Error in Appwrite Service :: getCurrentUser ", error);
       throw error;
     }
 
